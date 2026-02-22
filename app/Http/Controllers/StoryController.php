@@ -52,6 +52,28 @@ class StoryController extends Controller
         ]);
     }
 
+    public function edit(Request $request, Story $story): Response
+    {
+        abort_unless($story->user_id === $request->user()->id, 403);
+
+        return Inertia::render('Stories/Edit', [
+            'story' => $story,
+        ]);
+    }
+
+    public function update(StoreStoryRequest $request, Story $story)
+    {
+        abort_unless($story->user_id === $request->user()->id, 403);
+
+        $story->update([
+            'title' => $request->title,
+            'synopsis' => $request->synopsis,
+        ]);
+
+        return redirect()->route('stories.show', $story)
+            ->with('success', 'Story updated successfully.');
+    }
+
     public function destroy(Request $request, Story $story)
     {
         abort_unless($story->user_id === $request->user()->id, 403);

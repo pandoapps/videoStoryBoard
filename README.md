@@ -25,8 +25,11 @@ Each stage has a review step where you can approve, edit, or regenerate individu
 
 ### Prerequisites
 
-- Docker and Docker Compose
-- Make
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) (includes Docker Engine + Docker Compose)
+- [Git](https://git-scm.com/downloads)
+- `make` (pre-installed on macOS/Linux; on Windows use WSL2 or install via [chocolatey](https://chocolatey.org/): `choco install make`)
+
+All other dependencies (PHP, Node.js, Composer, npm, PostgreSQL, Redis, ffmpeg) run inside Docker containers — nothing else needs to be installed on your machine.
 
 ### Installation
 

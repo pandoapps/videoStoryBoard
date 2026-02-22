@@ -32,7 +32,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/costs', [CostsController::class, 'index'])->name('costs.index');
 
     // Stories
-    Route::resource('stories', StoryController::class)->only(['index', 'create', 'store', 'show', 'destroy']);
+    Route::resource('stories', StoryController::class)->only(['index', 'create', 'store', 'show', 'edit', 'update', 'destroy']);
 
     // Chat (Agent 1)
     Route::get('/stories/{story}/chat', [ChatController::class, 'index'])->name('stories.chat');

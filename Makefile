@@ -67,3 +67,9 @@ assets-build: ## Build frontend for production
 
 artisan: ## Run any artisan command (usage: make artisan cmd="migrate:status")
 	docker compose exec app php artisan $(cmd)
+
+send: ## Add, commit and push all changes
+	@read -p "Commit message: " msg && \
+	git add -A && \
+	git commit -m "$$msg" && \
+	git push
