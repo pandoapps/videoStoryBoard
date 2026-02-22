@@ -65,6 +65,9 @@ lint: ## Lint PHP code with Pint (dry-run)
 assets-build: ## Build frontend for production
 	docker compose exec node npm run build
 
+remotion-studio: ## Open Remotion Studio for video composition development
+	docker compose exec node npm run remotion:studio
+
 artisan: ## Run any artisan command (usage: make artisan cmd="migrate:status")
 	docker compose exec app php artisan $(cmd)
 

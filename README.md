@@ -12,6 +12,15 @@ Multi-agent video creation system that orchestrates AI services to turn story id
 
 Each stage has a review step where you can approve, edit, or regenerate individual items before moving forward.
 
+## Examples
+
+Two showcase videos demonstrating the full pipeline in action:
+
+- **Noah's Ark** (43s) — [showcase.mp4](public/showcase.mp4)
+- **Hinduism — The Battle of Lanka** (50s) — [hinduism-showcase.mp4](public/hinduism-showcase.mp4)
+
+Both videos walk through every pipeline stage: script writing, character generation, storyboard creation, video clip production, cost breakdown, and final concatenated result.
+
 ## Tech Stack
 
 - **Backend**: Laravel 12 (PHP 8.4)
